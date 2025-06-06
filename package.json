@@ -1,0 +1,16 @@
+
+{
+  "name": "sweetart-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "googleapis": "^127.0.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.8"
+  }
+}
