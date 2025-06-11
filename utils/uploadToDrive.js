@@ -5,7 +5,7 @@ const stream = require('stream');
 const fs = require('fs');
 
 const auth = new google.auth.GoogleAuth({
-  keyFile: path.join(__dirname, '../../sweetart-backend-3a324d82e72c.json'),
+  keyFile: path.join(__dirname, '/etc/secrets/sweetart-backend-3a324d82e72c.json'),
   scopes: ['https://www.googleapis.com/auth/drive'],
 });
 
