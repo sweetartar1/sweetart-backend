@@ -19,7 +19,7 @@ async function uploadToDrive(file) {
     requestBody: {
       name: file.originalname,
       mimeType: file.mimetype,
-      parents: [process.env.DRIVE_FOLDER_ID],
+      parents: ['1iqs8wC2ErV5LUc20IQB1h2k425BUkkW2'],
     },
     media: {
       mimeType: file.mimetype,
