@@ -3,8 +3,6 @@ const { google } = require('googleapis');
 const path = require('path');
 const stream = require('stream');
 const fs = require('fs');
-const fs = require('fs');
-
 // DEBUG: verificar acceso al archivo secreto
 try {
   const secretPath = '/etc/secrets/sweetart-backend-3a324d82e72c.json';
