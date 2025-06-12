@@ -34,7 +34,8 @@ const upload = multer({ storage: storage });
 // Tu backend en Render recibe aquí los datos del formulario 
 app.post('/pedidos', upload.single('comprobante'), async (req, res) => {
   try {
-    const { nombre, telefono, email, direccion, total } = req.body;
+    const { nombre, telefono, email, direccion } = req.body;
+    const total = req.body.total_pedido;
     const file = req.file;
 
     if (!file) {
