@@ -3,6 +3,23 @@ const { google } = require('googleapis');
 const path = require('path');
 const stream = require('stream');
 const fs = require('fs');
+const fs = require('fs');
+
+// DEBUG: verificar acceso al archivo secreto
+try {
+  const secretPath = '/etc/secrets/sweetart-backend-3a324d82e72c.json';
+  const exists = fs.existsSync(secretPath);
+  console.log('🔍 ¿El archivo secreto existe?', exists);
+
+  if (exists) {
+    const content = fs.readFileSync(secretPath, 'utf-8');
+    console.log('✅ Se pudo leer el archivo secreto.');
+    JSON.parse(content); // Esto valida que sea JSON válido
+    console.log('✅ El archivo secreto es un JSON válido.');
+  }
+} catch (error) {
+  console.error('❌ Error al leer el archivo secreto:', error.message);
+}
 
 const auth = new google.auth.GoogleAuth({
   keyFile: '/etc/secrets/sweetart-backend-3a324d82e72c.json',
